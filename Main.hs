@@ -9,8 +9,8 @@ import Happstack.Server (nullConf, simpleHTTP, toResponse,
 
 main :: IO ()
 main = do
-     putStrLn "Starting Server..."
-     simpleHTTP nullConf site
+  putStrLn "Starting Server..."
+  simpleHTTP nullConf site
 
 site :: ServerPart Response
 site = msum [subsite "timer" timer,
